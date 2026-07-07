@@ -28,6 +28,5 @@ data class NexusData(
     val insight: NexusInsight,
     val primaryMission: String,
     val tasks: List<NexusTask>,
-    val upcomingEvents: List<String>,
-    val suggestions: List<String> = emptyList()
+    val upcomingEvents: List<String>
 )

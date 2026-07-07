@@ -1,0 +1,176 @@
+﻿Diagnose log at 2026-07-07T07:49:21Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.8.0+d5e8a3442d48cc5efe7014e093e44242c0bd395f
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 26200)
+Reading environment variables... OK
+ Variables:
+SystemDrive=C:
+EFC_1036_4126798990=1
+MSYSTEM=MINGW64
+ProgramW6432=C:\Program Files
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 186 Stepping 3, GenuineIntel
+TMP=C:\Users\PRATHM~1\AppData\Local\Temp
+PROCESSOR_ARCHITECTURE=AMD64
+DriverData=C:\Windows\System32\Drivers\DriverData
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Prathmesh\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\MinGW\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk-21.0.11\bin;C:\Program Files\Git\cmd;C:\Users\Prathmesh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prathmesh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Prathmesh\.dotnet\tools;C:\Users\Prathmesh\AppData\Local\Muse Hub\lib;C:\MinGW\bin;C:\Users\Prathmesh\AppData\Local\Programs\Ollama;C:\Users\Prathmesh\AppData\Roaming\npm;C:\Program Files\Maven\apache-maven-3.9.16-bin\apache-maven-3.9.16\bin;D:\Flutter_D\flutter_windows_3.44.4-stable\flutter\bin;C:\Users\Prathmesh\AppData\Local\Programs\Antigravity IDE\bin;C:\Users\Prathmesh\AppData\AndroidCLI
+EFC_1036_2946480783=1
+PROCESSOR_REVISION=ba03
+TEMP=C:\Users\PRATHM~1\AppData\Local\Temp
+USERPROFILE=C:\Users\Prathmesh
+LOGONSERVER=\\DESKTOP-C4QJVAL
+TERM=xterm-256color
+USERNAME=Prathmesh
+SystemRoot=C:\Windows
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+PLINK_PROTOCOL=ssh
+OneDrive=C:\Users\Prathmesh\OneDrive
+CommonProgramFiles=C:\Program Files\Common Files
+ZES_ENABLE_SYSMAN=1
+ProgramData=C:\ProgramData
+EFC_1036_1592913036=1
+HOMEPATH=\Users\Prathmesh
+COMPUTERNAME=DESKTOP-C4QJVAL
+ALLUSERSPROFILE=C:\ProgramData
+CommonProgramW6432=C:\Program Files\Common Files
+SESSIONNAME=Console
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+HOMEDRIVE=C:
+windir=C:\Windows
+GIT_TRACE2_PARENT_SID=29955006-3a17-4cbf-a49c-46fbf772766d
+NUMBER_OF_PROCESSORS=12
+OS=Windows_NT
+ProgramFiles=C:\Program Files
+ComSpec=C:\Windows\system32\cmd.exe
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+HOME=C:\Users\Prathmesh
+ProgramFiles(x86)=C:\Program Files (x86)
+PSModulePath=C:\Users\Prathmesh\OneDrive\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+TMPDIR=C:\Users\PRATHM~1\AppData\Local\Temp
+APPDATA=C:\Users\Prathmesh\AppData\Roaming
+USERDOMAIN=DESKTOP-C4QJVAL
+PROCESSOR_LEVEL=6
+LC_CTYPE=C.UTF-8
+LOCALAPPDATA=C:\Users\Prathmesh\AppData\Local
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-C4QJVAL
+COLORTERM=truecolor
+PUBLIC=C:\Users\Public
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\Prathmesh\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\Prathmesh\AppData\Local\Temp\c5664dd9a279b334100f58fa'... OK
+Reading from temporary file 'C:\Users\Prathmesh\AppData\Local\Temp\c5664dd9a279b334100f58fa'... OK
+Deleting temporary file 'C:\Users\Prathmesh\AppData\Local\Temp\c5664dd9a279b334100f58fa'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\Prathmesh
+UserDataDirectoryPath: C:\Users\Prathmesh\.gcm
+GetCurrentDirectory(): D:\A_S_Projects\LifeOSAI
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:50501/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.55.0.windows.2'
+Locating current repository...Git repository at 'D:/A_S_Projects/LifeOSAI/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=schannel
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=true
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/Prathmesh/.gitconfig	core.editor="C:\Users\Prathmesh\AppData\Local\Programs\Microsoft VS Code\bin\code" --wait
+file:C:/Users/Prathmesh/.gitconfig	user.name=Prathmesh Chaudhari
+file:C:/Users/Prathmesh/.gitconfig	user.email=25amtics061@gmail.com
+file:C:/Users/Prathmesh/.gitconfig	init.defaultbranch=main
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/Prathmesh-oss/LifeOS-AI.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\Prathmesh\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\Prathmesh\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
