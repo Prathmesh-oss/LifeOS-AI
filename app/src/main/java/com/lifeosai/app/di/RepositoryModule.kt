@@ -1,6 +1,6 @@
 package com.lifeosai.app.di
 
-import com.lifeosai.app.data.repository.LifeOSRepositoryImpl
+import com.lifeosai.app.data.repository.*
 import com.lifeosai.app.domain.repository.LifeOSRepository
 import dagger.Binds
 import dagger.Module
@@ -17,4 +17,6 @@ abstract class RepositoryModule {
     abstract fun bindLifeOSRepository(
         lifeOSRepositoryImpl: LifeOSRepositoryImpl
     ): LifeOSRepository
+    
+    // Additional domain-specific repositories can be bound here if interfaces are defined in domain
 }
