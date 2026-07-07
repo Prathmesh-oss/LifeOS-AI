@@ -2,7 +2,10 @@ package com.lifeosai.app.data.repository
 
 import com.lifeosai.app.domain.model.*
 import com.lifeosai.app.domain.repository.LifeOSRepository
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -17,7 +20,7 @@ class LifeOSRepositoryImpl @Inject constructor() : LifeOSRepository {
         )
     )
 
-    override fun getNexusData(): Flow<NexusData> = _tasks.map { tasks ->
+    override fun getNexusData(): Flow<NexusData> = flowOf(
         NexusData(
             userName = "Alex",
             dna = LifeOSDNA(
@@ -34,11 +37,10 @@ class LifeOSRepositoryImpl @Inject constructor() : LifeOSRepository {
                 probability = 78
             ),
             primaryMission = "Launch LifeOS AI Beta",
-            tasks = tasks,
-            upcomingEvents = listOf("10:00 AM - Sync with AI Engine", "2:00 PM - Deep Work Session"),
-            suggestions = listOf("Take a 5-min breathwork break", "Hydrate: Drink 500ml of water", "Review tomorrow's focus")
+            tasks = _tasks.value,
+            upcomingEvents = listOf("10:00 AM - Sync with AI Engine", "2:00 PM - Deep Work Session")
         )
-    }
+    )
 
     override fun getLifeOSDNA(): Flow<LifeOSDNA> = flowOf(
         LifeOSDNA(
