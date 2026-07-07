@@ -18,5 +18,5 @@ abstract class RepositoryModule {
         lifeOSRepositoryImpl: LifeOSRepositoryImpl
     ): LifeOSRepository
     
-    // Additional domain-specific repositories can be bound here if interfaces are defined in domain
+    // Bindings for other repositories can be added here once their interfaces are in the domain layer
 }
