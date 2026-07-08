@@ -14,10 +14,16 @@ import androidx.core.view.WindowCompat
 private val DarkColorScheme = darkColorScheme(
     primary = Primary,
     onPrimary = OnPrimary,
+    primaryContainer = PrimaryContainer,
+    onPrimaryContainer = OnPrimaryContainer,
     secondary = Secondary,
     onSecondary = OnSecondary,
+    secondaryContainer = SecondaryContainer,
+    onSecondaryContainer = OnSecondaryContainer,
     tertiary = Tertiary,
     onTertiary = OnTertiary,
+    tertiaryContainer = TertiaryContainer,
+    onTertiaryContainer = OnTertiaryContainer,
     background = Background,
     onBackground = OnBackground,
     surface = Surface,
@@ -25,25 +31,34 @@ private val DarkColorScheme = darkColorScheme(
     surfaceVariant = SurfaceVariant,
     onSurfaceVariant = OnSurfaceVariant,
     outline = Outline,
-    error = SoftRed
+    outlineVariant = OutlineVariant,
+    error = Error,
+    onError = OnError,
+    errorContainer = ErrorContainer,
+    onErrorContainer = OnErrorContainer
 )
 
 @Composable
 fun LifeOSAITheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // We force AMOLED dark for premium feel, but allow light if explicitly requested
     content: @Composable () -> Unit
 ) {
-    // For this premium app, we are "Dark Mode First"
+    // LifeOS AI is optimized for a premium dark experience. 
+    // We use the dark scheme even in light mode for the "Obsidian" brand identity,
+    // but we can support light mode if needed in the future.
     val colorScheme = DarkColorScheme
     val view = LocalView.current
     
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.background.toArgb()
-            window.navigationBarColor = colorScheme.background.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = false
+            // Transparent system bars for a modern, integrated look
+            window.statusBarColor = Color.Transparent.toArgb()
+            window.navigationBarColor = Color.Transparent.toArgb()
+            
+            val windowInsetsController = WindowCompat.getInsetsController(window, view)
+            windowInsetsController.isAppearanceLightStatusBars = false
+            windowInsetsController.isAppearanceLightNavigationBars = false
         }
     }
 
