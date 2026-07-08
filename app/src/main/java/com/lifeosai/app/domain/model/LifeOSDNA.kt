@@ -1,5 +1,9 @@
 package com.lifeosai.app.domain.model
 
+enum class Priority {
+    LOW, MEDIUM, HIGH, URGENT
+}
+
 data class LifeOSDNA(
     val productivityType: String,
     val lifeScore: Int,
