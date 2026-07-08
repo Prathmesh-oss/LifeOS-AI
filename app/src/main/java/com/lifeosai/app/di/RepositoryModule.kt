@@ -41,4 +41,10 @@ abstract class RepositoryModule {
     abstract fun bindFlowRepository(
         flowRepositoryImpl: com.lifeosai.app.data.repository.FlowRepositoryImpl
     ): com.lifeosai.app.domain.repository.FlowRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindProfileRepository(
+        profileRepositoryImpl: com.lifeosai.app.data.repository.ProfileRepositoryImpl
+    ): com.lifeosai.app.domain.repository.ProfileRepository
 }

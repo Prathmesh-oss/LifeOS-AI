@@ -32,6 +32,8 @@ enum class MemoryType {
     QUOTE,
     BOOKMARK,
     VOICE,
+    VOICE_TRANSCRIPT,
+    NOTE,
     CONVERSATION,
     AI_INSIGHT,
     SYSTEM_LOG

@@ -100,7 +100,7 @@ private fun CaptureContent(
                     ActionChip("Import", Icons.Rounded.CloudUpload, { onEvent(CaptureUiEvent.OnDocumentImportClick) })
                 }
                 Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    ActionChip("Task", Icons.Rounded.AddCheck, { onEvent(CaptureUiEvent.OnQuickTaskClick) })
+                    ActionChip("Task", Icons.Rounded.CheckCircle, { onEvent(CaptureUiEvent.OnQuickTaskClick) })
                     ActionChip("Reminder", Icons.Rounded.NotificationAdd, { onEvent(CaptureUiEvent.OnQuickReminderClick) })
                     ActionChip("Event", Icons.Rounded.Event, { onEvent(CaptureUiEvent.OnQuickEventClick) })
                 }

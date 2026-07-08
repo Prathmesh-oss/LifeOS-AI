@@ -81,6 +81,8 @@ private fun getIconForType(type: MemoryType): ImageVector = when (type) {
     MemoryType.QUOTE -> Icons.Rounded.FormatQuote
     MemoryType.BOOKMARK -> Icons.Rounded.Bookmark
     MemoryType.VOICE -> Icons.Rounded.Mic
+    MemoryType.VOICE_TRANSCRIPT -> Icons.Rounded.Mic
+    MemoryType.NOTE -> Icons.Rounded.Description
     MemoryType.CONVERSATION -> Icons.Rounded.ChatBubble
     MemoryType.AI_INSIGHT -> Icons.Rounded.AutoAwesome
     MemoryType.SYSTEM_LOG -> Icons.Rounded.Settings
