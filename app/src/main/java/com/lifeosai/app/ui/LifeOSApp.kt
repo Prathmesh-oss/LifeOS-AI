@@ -19,6 +19,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.lifeosai.app.navigation.Route
+import com.lifeosai.app.ui.feature.brain.BrainScreen
+import com.lifeosai.app.ui.feature.capture.CaptureScreen
+import com.lifeosai.app.ui.feature.flow.FlowScreen
+import com.lifeosai.app.ui.feature.profile.ProfileScreen
 import com.lifeosai.app.ui.nexus.NexusScreen
 import com.lifeosai.app.ui.splash.SplashScreen
 
@@ -89,18 +93,6 @@ fun LifeOSApp() {
                     }
                 }
             }
-        },
-        floatingActionButton = {
-            if (showBottomBar) {
-                FloatingActionButton(
-                    onClick = { /* Quick Capture Action */ },
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    contentColor = MaterialTheme.colorScheme.onPrimary,
-                    shape = FloatingActionButtonDefaults.largeShape
-                ) {
-                    Icon(Icons.Rounded.Mic, contentDescription = "Quick Capture")
-                }
-            }
         }
     ) { innerPadding ->
         NavHost(
@@ -119,29 +111,17 @@ fun LifeOSApp() {
                 NexusScreen()
             }
             composable<Route.Brain> {
-                PlaceholderScreen("Brain Screen")
+                BrainScreen()
             }
             composable<Route.Capture> {
-                PlaceholderScreen("Capture Screen")
+                CaptureScreen()
             }
             composable<Route.Flow> {
-                PlaceholderScreen("Flow Screen")
+                FlowScreen()
             }
             composable<Route.Profile> {
-                PlaceholderScreen("Profile Screen")
+                ProfileScreen()
             }
-        }
-    }
-}
-
-@Composable
-fun PlaceholderScreen(name: String) {
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
-    ) {
-        Box(contentAlignment = Alignment.Center) {
-            Text(text = name, style = MaterialTheme.typography.headlineMedium)
         }
     }
 }
