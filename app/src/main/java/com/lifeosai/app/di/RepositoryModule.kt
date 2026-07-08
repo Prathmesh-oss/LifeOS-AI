@@ -17,4 +17,16 @@ abstract class RepositoryModule {
     abstract fun bindLifeOSRepository(
         lifeOSRepositoryImpl: LifeOSRepositoryImpl
     ): LifeOSRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindMemoryRepository(
+        memoryRepositoryImpl: com.lifeosai.app.data.repository.MemoryRepositoryImpl
+    ): com.lifeosai.app.domain.repository.MemoryRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindBrainRepository(
+        brainRepositoryImpl: com.lifeosai.app.data.repository.BrainRepositoryImpl
+    ): com.lifeosai.app.domain.repository.BrainRepository
 }

@@ -26,6 +26,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.lifeosai.app.domain.model.LifeOSDNA
 import com.lifeosai.app.domain.model.NexusData
 import com.lifeosai.app.domain.model.NexusTask
+import com.lifeosai.app.ui.designsystem.components.LifeOSLoading
 import java.util.*
 
 @Composable
@@ -41,9 +42,7 @@ fun NexusScreen(
     ) {
         when (val state = uiState) {
             is NexusUiState.Loading -> {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
-                }
+                LifeOSLoading()
             }
             is NexusUiState.Success -> {
                 NexusContent(
